@@ -27,7 +27,7 @@
   <!-- Стили -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Шрифты -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -307,9 +307,10 @@ Spolehlivá firma, dobrá komunikace a kvalitní výsledek.
 
 <h2>Kontaktujte nás</h2>
 
-
 <div class="contact-wrapper">
 
+
+<!-- CONTACT INFORMATION -->
 
 <div class="contact-box">
 
@@ -332,7 +333,7 @@ Spolehlivá firma, dobrá komunikace a kvalitní výsledek.
 </div>
 
 
-<!-- NETLIFY FORM -->
+<!-- NETLIFY CONTACT FORM -->
 
 <form
   class="contact-form"
@@ -342,59 +343,68 @@ Spolehlivá firma, dobrá komunikace a kvalitní výsledek.
   data-netlify-honeypot="bot-field"
 >
 
-<input
-  type="hidden"
-  name="form-name"
-  value="contact"
->
+  <!-- Обязательный идентификатор формы для Netlify -->
+  <input
+    type="hidden"
+    name="form-name"
+    value="contact"
+  >
+
+  <!-- Защита от ботов -->
+  <div class="hidden-field">
+    <label>
+      Nevyplňujte toto pole:
+      <input name="bot-field">
+    </label>
+  </div>
 
 
-<!-- Защита от ботов -->
+  <!-- NAME -->
 
-<p class="hidden-field">
-<label>
-Nevyplňujte toto pole:
-<input name="bot-field">
-</label>
-</p>
-
-
-<input
-  type="text"
-  name="name"
-  placeholder="Vaše jméno"
-  autocomplete="name"
-  required
->
+  <input
+    type="text"
+    name="name"
+    placeholder="Vaše jméno"
+    autocomplete="name"
+    required
+  >
 
 
-<input
-  type="tel"
-  name="phone"
-  placeholder="Telefon"
-  autocomplete="tel"
-  required
->
+  <!-- PHONE -->
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Telefon"
+    autocomplete="tel"
+    required
+  >
 
 
-<input
-  type="email"
-  name="email"
-  placeholder="E-mail"
-  autocomplete="email"
->
+  <!-- EMAIL -->
+
+  <input
+    type="email"
+    name="email"
+    placeholder="E-mail"
+    autocomplete="email"
+  >
 
 
-<textarea
-  name="message"
-  placeholder="Popište váš projekt"
-  required
-></textarea>
+  <!-- MESSAGE -->
+
+  <textarea
+    name="message"
+    placeholder="Popište váš projekt"
+    required
+  ></textarea>
 
 
-<button type="submit">
-Odeslat poptávku
-</button>
+  <!-- SUBMIT -->
+
+  <button type="submit">
+    Odeslat poptávku
+  </button>
 
 </form>
 
@@ -410,6 +420,7 @@ Odeslat poptávku
 <iframe
   src="https://maps.google.com/maps?q=Zenklova%2024%2F54%20Praha&t=&z=15&ie=UTF8&iwloc=&output=embed"
   loading="lazy"
+  title="Mapa umístění MPFspec"
 ></iframe>
 
 </section>
@@ -429,13 +440,17 @@ Odeslat poptávku
 <a
   href="tel:+420775638035"
   class="phone-button"
+  aria-label="Zavolat MPFspec"
 >
+
 <i class="fa-solid fa-phone"></i>
+
 </a>
 
+
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
