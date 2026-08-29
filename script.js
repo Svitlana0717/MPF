@@ -1,22 +1,25 @@
 // ===============================
 // MPFspec s.r.o.
-// Premium Website JavaScript 2026
+// Normal Smooth Scroll (2026)
 // ===============================
 
 
-// Smooth Scroll for Menu Links
+// ⭐ NORMAL SMOOTH SCROLL (без замедления)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", e => {
         const target = document.querySelector(link.getAttribute("href"));
         if (!target) return;
 
         e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
     });
 });
 
 
-// Intersection Observer Animations
+// ⭐ Intersection Observer Animations
 const animatedElements = document.querySelectorAll(
     ".card, .info-box, .gallery img, .stat-item"
 );
@@ -33,7 +36,7 @@ animatedElements.forEach(el => {
 });
 
 
-// Statistics Counter Animation
+// ⭐ Statistics Counter Animation
 const counters = document.querySelectorAll(".stat-item h3");
 let countersStarted = false;
 
@@ -71,7 +74,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-// Header Shadow on Scroll
+// ⭐ Header Shadow on Scroll
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
@@ -84,9 +87,9 @@ window.addEventListener("scroll", () => {
 });
 
 
-// Burger Menu
+// ⭐ Burger Menu
 const burger = document.querySelector(".burger");
-const mobileMenu = document.querySegitlector(".mobile-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
 
 if (burger && mobileMenu) {
     burger.addEventListener("click", () => {
@@ -103,5 +106,5 @@ if (burger && mobileMenu) {
 }
 
 
-// Console Log
+// ⭐ Console Log
 console.log("MPFspec website (2026) loaded successfully");
