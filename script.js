@@ -1,10 +1,10 @@
 // ===============================
 // MPFspec s.r.o.
-// Normal Smooth Scroll (2026)
+// Full JS (2026)
 // ===============================
 
 
-// ⭐ NORMAL SMOOTH SCROLL (без замедления)
+// ⭐ NORMAL SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", e => {
         const target = document.querySelector(link.getAttribute("href"));
@@ -21,7 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 // ⭐ Intersection Observer Animations
 const animatedElements = document.querySelectorAll(
-    ".card, .info-box, .gallery img, .stat-item"
+    ".card, .info-box, .stat-item, .slider"
 );
 
 const observer = new IntersectionObserver(entries => {
@@ -106,5 +106,41 @@ if (burger && mobileMenu) {
 }
 
 
+// ===== BEFORE / AFTER SLIDER =====
+
+function initBaSliders() {
+    const sliders = document.querySelectorAll(".ba-slider");
+
+    sliders.forEach(slider => {
+        const images = slider.querySelectorAll(".ba-image");
+        const prev = slider.querySelector(".ba-prev");
+        const next = slider.querySelector(".ba-next");
+
+        let index = 0;
+
+        function show(i) {
+            images.forEach((img, idx) => {
+                img.classList.toggle("active", idx === i);
+            });
+        }
+
+        prev.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            show(index);
+        });
+
+        next.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            show(index);
+        });
+
+        show(index);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initBaSliders);
+
+
+
 // ⭐ Console Log
-console.log("MPFspec website (2026) loaded successfully");
+console.log("MPFspec website (2026) fully loaded");

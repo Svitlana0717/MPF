@@ -2,12 +2,6 @@
 <html lang="cs">
 <head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,7 +16,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -102,20 +96,16 @@
 <section class="statistics">
   <div class="stats-container">
     <div class="stat-item">
-      <h3>10+</h3>
+      <h3>5+</h3>
       <p>Let zkušeností</p>
     </div>
     <div class="stat-item">
-      <h3>150+</h3>
+      <h3>25+</h3>
       <p>Dokončených projektů</p>
     </div>
     <div class="stat-item">
-      <h3>100+</h3>
+      <h3>30+</h3>
       <p>Spokojených klientů</p>
-    </div>
-    <div class="stat-item">
-      <h3>24/7</h3>
-      <p>Individuální přístup</p>
     </div>
   </div>
 </section>
@@ -124,6 +114,7 @@
 <section id="services">
   <h2>Naše služby</h2>
   <div class="cards">
+
     <div class="card">
       <i class="fa-solid fa-house"></i>
       <h3>Výstavba domů</h3>
@@ -159,18 +150,52 @@
       <h3>Kompletní realizace</h3>
       <p>Projekt od návrhu až po předání klientovi.</p>
     </div>
+
   </div>
 </section>
 
 
 <section id="projects">
-  <h2>Naše realizace</h2>
-  <div class="gallery">
-    <img src="images/project1.jpg" alt="Realizace stavby" loading="lazy">
-    <img src="images/project2.jpg" alt="Rekonstrukce interiéru" loading="lazy">
-    <img src="images/project3.jpg" alt="Stavební práce" loading="lazy">
+  <h2 class="projects-title">Naše realizace – před a po</h2>
+
+  <div class="before-after">
+
+    <!-- BEFORE -->
+    <div class="ba-column">
+      <h3>Před rekonstrukcí</h3>
+
+      <div class="ba-slider" data-group="before">
+        <button class="ba-arrow ba-prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+        <div class="ba-track">
+          <img src="images/before1.jpg" class="ba-image active">
+          <img src="images/before2.jpg" class="ba-image">
+          <img src="images/before3.jpg" class="ba-image">
+        </div>
+
+        <button class="ba-arrow ba-next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- AFTER -->
+    <div class="ba-column">
+      <h3>Po rekonstrukci</h3>
+
+      <div class="ba-slider" data-group="after">
+        <button class="ba-arrow ba-prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+        <div class="ba-track">
+          <img src="images/after1.jpg" class="ba-image active">
+          <img src="images/after2.jpg" class="ba-image">
+        </div>
+
+        <button class="ba-arrow ba-next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 
 <section id="contact">
